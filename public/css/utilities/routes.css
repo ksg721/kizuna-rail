@@ -1,3 +1,33 @@
+.routes-page,
+#filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-lg);
+    align-items: center;
+    margin-bottom: var(--space-xl);
+}
+
+#filters label {
+    display: grid;
+    justify-items: center;
+    gap: var(--space-xs);
+    text-align: center;
+}
+
+#filters label:last-child {
+    grid-column: 2;
+}
+
+@media (max-width: 600px) {
+    #filters {
+        grid-template-columns: 1fr;
+    }
+
+    #filters label:last-child {
+        grid-column: 1;
+    }
+}
+
 .routes-grid {
     display: flex;
     flex-direction: column;
